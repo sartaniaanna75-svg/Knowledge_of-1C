@@ -1,0 +1,66 @@
+/* Prism — WebGL-фон в стиле сайта */
+
+.prism-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.prism-container canvas {
+  position: absolute !important;
+  inset: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  display: block !important;
+  pointer-events: none;
+}
+
+.hero__prism {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.42;
+  mix-blend-mode: multiply;
+}
+
+.hero__prism-wash {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse 70% 55% at 85% 15%, rgba(212, 168, 83, 0.18) 0%, transparent 55%),
+    radial-gradient(ellipse 55% 50% at 8% 85%, rgba(26, 61, 46, 0.12) 0%, transparent 50%),
+    linear-gradient(160deg, rgba(245, 240, 230, 0.55) 0%, rgba(250, 247, 242, 0.72) 100%);
+}
+
+.hero > .container,
+.hero > .trust-bar {
+  position: relative;
+  z-index: 2;
+}
+
+.hero__stripe {
+  z-index: 1;
+}
+
+@media (max-width: 768px) {
+  .hero__prism {
+    opacity: 0.28;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero__prism {
+    display: none;
+  }
+
+  .hero__prism-wash {
+    background:
+      radial-gradient(ellipse 80% 60% at 90% 20%, rgba(212, 168, 83, 0.18) 0%, transparent 60%),
+      radial-gradient(ellipse 60% 50% at 10% 80%, rgba(26, 61, 46, 0.08) 0%, transparent 55%),
+      linear-gradient(160deg, var(--cream) 0%, var(--paper) 100%);
+  }
+}

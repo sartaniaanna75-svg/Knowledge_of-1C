@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Инструкции — БАЗА 1С</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&family=Unbounded:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body class="is-guide">
+  <header class="guide-top">
+    <a class="brand" href="index.html">База <span>1С</span></a>
+    <div class="search-wrap">
+      <label class="skip" for="search">Поиск</label>
+      <input id="search" type="search" placeholder="Поиск по инструкциям…" autocomplete="off" />
+    </div>
+    <a class="btn btn-primary" href="index.html#roles" style="padding:10px 16px">К ролям</a>
+  </header>
+
+  <div class="guide-layout">
+    <aside class="sidebar" aria-label="Содержание">
+      <h2>Разделы</h2>
+      <nav>
+        <ul class="nav-list" id="nav"></ul>
+      </nav>
+      <div id="search-results" class="hidden" style="margin-top:14px"></div>
+    </aside>
+
+    <article class="article" id="article" aria-live="polite"></article>
+  </div>
+
+  <script src="assets/content.js"></script>
+  <script src="assets/guide.js"></script>
+</body>
+</html>
